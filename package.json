@@ -4,7 +4,8 @@
   "description": "Learning ES6",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -p && webpack-dev-server --inline"
   },
   "author": "Amberish Raj",
   "license": "MIT",
