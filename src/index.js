@@ -9,11 +9,11 @@ class Person {
     return this.name;
   }
 
-  set tasks(tasks = []) {
+  setTasks(tasks = []) {
     this.tasks = tasks;
   }
 
-  get tasks(){
+  getTasks(){
     return this.tasks;
   }
 }
@@ -21,4 +21,6 @@ class Person {
 let args = {name: "Amberish"};
 let person = new Person(args);
 person.getName();
-person.tasks();
+person.getTasks();
+
+console.log(person.getName());
