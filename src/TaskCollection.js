@@ -1,2 +1,7 @@
-let data;
-export default data = ["Amberish", "Amit"];
+class TaskCollection {
+  constructor(tasks = []){
+    this.tasks = tasks;
+  }
+}
+
+export default TaskCollection;

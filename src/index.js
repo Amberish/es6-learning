@@ -1,26 +1,23 @@
-import data from "./TaskCollection.js";
+import TaskCollection from "./TaskCollection.js";
 
 class Person {
   constructor({name}){
     this.name = name;
   }
 
-  getName(){
-    return this.name;
+  getPersonTasks(){
+    let msg = `${this.name} has following tasks:\n ${this.tasks}`;
+    console.log(msg);
   }
 
-  setTasks(tasks = []) {
-    this.tasks = tasks;
-  }
-
-  getTasks(){
-    return this.tasks;
+  associateTask(collection){
+    this.tasks = collection.tasks;
   }
 }
 
-let args = {name: "Amberish"};
-let person = new Person(args);
-person.getName();
-person.getTasks();
+let tasks = ["sleep", "eat", "drink"];
+let collection = new TaskCollection(tasks);
+let person = new Person({name: "Amberish"});
+person.associateTask(collection);
 
-console.log(person.getName());
+person.getPersonTasks();
